@@ -26,6 +26,11 @@ NLP는 최첨단 딥러닝 모델 및 작업을 포함하고 있다.
 각 단어를 준비하기 위한 가장 low level의 task
 + Tokenization
     + 문장을 이루는 각 단어들을 정보 단위로 생각.
-    + 주어진 문장을 단어(Token) 단위로 나누는 과정
+    + 주어진 문장<sup>[1](#footnote_1)</sup>을 단어(Token) 단위로 나누는 과정
 + Stemming
     + 어미 변화에 따른 의미 변화를 없애고 단어의 어근을 추출
+
+
+
+
+<a name="footnote_1">1</a>: Token들이 특정 순서로 이루어진 sequence
