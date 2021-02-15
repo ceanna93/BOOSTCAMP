@@ -11,7 +11,7 @@ categories: AI
 ## NLP(Natural Language Processing)
 NLU(Natural Language Undestanding)과 LNG(Natural Language Generation이 존재
 
-<img src="https://user-images.githubusercontent.com/12611645/107938878-53cd3880-6fc9-11eb-81e2-fa1a85526400.png" width="40%" height="30%" title="NLP diagram" alt="RubberDuck"></img>
+<img src="https://user-images.githubusercontent.com/12611645/107938878-53cd3880-6fc9-11eb-81e2-fa1a85526400.png" width="40%" height="30%" title="NLP diagram" alt="NLPDiagram">
 
 집합으로 표현하면 [위 그림](https://insights.ai-jobs.net/the-past-and-the-present-of-natural-language-generation/)과 같다.
 
