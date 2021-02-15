@@ -8,9 +8,8 @@ categories: AI
 + Academic Disciplines related to NLP
 + Treands of NLP
 
-## NLP
-NLP(Natural Language Processing)
-= NLU(Natural Language Undestanding)과 LNG(Natural Language Generation이 존재
+## NLP(Natural Language Processing)
+NLU(Natural Language Undestanding)과 LNG(Natural Language Generation이 존재
 
 <img src="https://user-images.githubusercontent.com/12611645/107938878-53cd3880-6fc9-11eb-81e2-fa1a85526400.png" width="40%" height="30%" title="NLP diagram" alt="RubberDuck"></img>
 
