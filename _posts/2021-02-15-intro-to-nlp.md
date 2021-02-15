@@ -14,7 +14,7 @@ NLP(Natural Language Processing)
 
 <img src="https://user-images.githubusercontent.com/12611645/107938878-53cd3880-6fc9-11eb-81e2-fa1a85526400.png" width="40%" height="30%" title="NLP diagram" alt="RubberDuck"></img>
 
-집합으로 표현하면 위 그림<https://insights.ai-jobs.net/the-past-and-the-present-of-natural-language-generation/>과 같다.
+집합으로 표현하면 [위 그림](https://insights.ai-jobs.net/the-past-and-the-present-of-natural-language-generation/)과 같다.
 
 ##Natural language processing
 NLP는 최첨단 딥러닝 모델 및 작업을 포함하고 있다.
