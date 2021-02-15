@@ -17,6 +17,7 @@ NLU(Natural Language Undestanding)과 LNG(Natural Language Generation이 존재
 
 ## Natural language processing
 NLP는 최첨단 딥러닝 모델 및 작업을 포함하고 있다.
+
 <span style="color:#D3D3D3">Includes state-of-the-art deep</span>
 
 
