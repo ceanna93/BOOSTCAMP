@@ -52,6 +52,15 @@ NLP는 최첨단 딥러닝 모델 및 작업을 포함하고 있다.
     + 챗봇 (대화 실행)
 + summarization
     + 문서 요약
+    
+## Text mining
+빅데이터 분석과 관련된 기술
++ Extract useful information and insights from text and document data
+    + e.g., analyzing the trends of AI-related keywords from massive news data
++ Document clustering (e.g., topic modeling)
+    + e.g., clustering news data and grouping into different subjects
++ Highly related to computational social science
+    + e.g., analyzing the evolution of people’s political tendency based on social media data
 
 ------------------------------------------------------------------
 <a name="footnote_1">1</a>: Token들이 특정 순서로 이루어진 sequence
