@@ -39,22 +39,24 @@ NLP는 최첨단 딥러닝 모델 및 작업을 포함하고 있다.
 
 ### Sentence level
 + Sentiment analysis
-    + <span style="color:#A9A9A9">문장의 긍정/부정 판단</span>
+    + 문장의 긍정/부정 판단
 + machine translation
-    + <span style="color:#A9A9A9">영어 문장을 한글 문장으로 번역</span>
+    + 영어 문장을 한글 문장으로 번역
 
 ### Multi-sentence and paragraph level
 + Entailment prediction
-    + <span style="color:#A9A9A9">두 문장의 논리적인 내포, 모순 관계 파악</span>
+    + 두 문장의 논리적인 내포, 모순 관계 파악
 + question answering
-    + <span style="color:#A9A9A9">독해 기반의 질의 응답 (구글 검색에서 문장으로 질문 입력 시 답이 출력)</span>
+    + 독해 기반의 질의 응답 (구글 검색에서 문장으로 질문 입력 시 답이 출력)
 + dialog systems
-    + <span style="color:#A9A9A9">챗봇 (대화 실행)</span>
+    + 챗봇 (대화 실행)
 + summarization
-    + <span style="color:#A9A9A9">문서 요약</span>
+    + 문서 요약
 
 ------------------------------------------------------------------
 <a name="footnote_1">1</a>: Token들이 특정 순서로 이루어진 sequence
+
 <a name="footnote_2">2</a>: 단일 단어, 고유 단어 인식 task (New york times)
+
 <a name="footnote_3">3</a>: 단어의 품사나 성분을 알아내는 task (주어, 목적어, 동사 등)
 
