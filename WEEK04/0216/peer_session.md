@@ -27,21 +27,22 @@
 
 ### Interview
 1. ReLU의 장점
-  - 연산 속도, 수렴 속도가 다른 Activation 함수에 비해 빠르다.
-  - Vanishing Gradient 문제가 나타나지 않는다.
+    - 연산 속도, 수렴 속도가 다른 Activation 함수에 비해 빠르다.
+    - Vanishing Gradient 문제가 나타나지 않는다.
 
 2. ReLU의 문제점
-  - Input 값이 모두 0인 경우 뉴런이 모두 죽어 더이상 값이 업데이트 되지 않을 수 있다.
-  - Sigmoid와 공유하는 단점으로 zero-centered가 아니라는 점. 따라서 수렴하고자 하는 위치가 2 또는 4사분면에 존재하는 경우 직선으로 갈 수 없고 zigzag하게 가게 되어 업데이트가 느려지게 된다.
+     - Input 값이 모두 0인 경우 뉴런이 모두 죽어 더이상 값이 업데이트 되지 않을 수 있다.
+     - Sigmoid와 공유하는 단점으로 zero-centered가 아니라는 점. 따라서 수렴하고자 하는 위치가 2 또는 4사분면에 존재하는 경우 직선으로 갈 수 없고 zigzag하게 가게 되어 업데이트가 느려지게 된다.
 
 3. bias 사용 이유
-  - Input 데이터를 유연하게 처리하기 위해 (네트워크의 유연성)
+     - Input 데이터를 유연하게 처리하기 위해 (네트워크의 유연성)
   
 4. CNN에서 Activation FUnction, Batch, Convolution layout, Dropout, Maxpooling의 순서
+     - C -> B -> A -> D -> P
 
 5. Train 데이터가 10000개, Test 데이터가 1,000,000개 존재할 때 학습 방법
-  - data augmentation
-  - 라벨링이 정확한 소량의 데어터와 라벨링이 정확하지 않더라도 대량의 데이터가 학습에 더 효과적이다. 따라서 Train 데이터로 우선 학습을 시키고, Test 데이터를 라벨링한 후, 해당 모델을 삭제하고 라벨링된 Test 데이터로 학습을 다시 진행하는 방법
+     - data augmentation
+     - 라벨링이 정확한 소량의 데어터와 라벨링이 정확하지 않더라도 대량의 데이터가 학습에 더 효과적이다. 따라서 Train 데이터로 우선 학습을 시키고, Test 데이터를 라벨링한 후, 해당 모델을 삭제하고 라벨링된 Test 데이터로 학습을 다시 진행하는 방법
   
   
   
