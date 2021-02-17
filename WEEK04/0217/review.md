@@ -1,5 +1,5 @@
-# sequence to sequence(Seq2Seq)
-Sequence를 Encoding와 Decoding
+# Sequence to Sequence (Seq2Seq)
+Sequence를 Encoding와 Decoding하는 작업
 
 Sequence to sequence는 encoder와 decoder로 이루어져 있는 framework으로 대표적인 자연어 처리 architecture 중 하나
 
@@ -65,6 +65,7 @@ Greedy approach
 전체적인 joint probability의 값을 최대화 하는 게 더 좋은 결과를 낼 수 있다.
 경우의 수가 너무 많아지기 때문에 차선책으로 나온 방법이 **Beam search**
 
+### Beam search
 Greedy decoding과 가능한 모든 경우를 따지는 방법 중간의 접근 방법
 Decoder의 time step마다 K개의 가능한 가지수를 고려하고 time step이 진행함에도 K개의 경우의 수를 유지하고 마지막까지 decoding을 진행하고 최종적으로 나온 확률들 중 가장 확률이 높은 것을 택하는 방식
 
@@ -88,7 +89,7 @@ time step의 최댓값을 설정하고 time step이 해당 설정에 도달하�
 항상 음수 값을 더해주기 때문에 길이가 길어질수록 joint probability 값이 더 작은 값으로 나오게 된다.
 공평하게 비교하기 위해서 각 hypothesis 별로 단어의 개수로 나누어 준다. 단어 당 평균 값.
 
-BLEU score
+### BLEU score
 정밀도 : 예측된 결과가 노출되었을 때 사용자가 실질적으로 느끼는 정확도
 검색 시스템에서 특정한 키워드로 검색을 했을 때 검색 결과 문서들이 원하는 정보, 의도에 부합하는 문서들이 나온 경우 검색 결과가 만족스럽다고 생각. 눈으로 보고 판단할 수 있는 대상.
 재현율 : 검색 시스템에서 키워드를 가지고 검색했을 때 키워드에 관련된 문서들 중 실제로는 검색 키워드에 부합하지만 결과에 노출되지 않은 문서들에 실제로 필요로 하는 정보들이 존재할 수 있다. 의도에 부합하는 문서의 개수 중 몇 개를 사용자에게 노출시켜주었는지.
