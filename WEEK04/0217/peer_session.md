@@ -1,4 +1,4 @@
-# 02/16 Peer Session
+# 02/17 Peer Session
 
 ## Q&A
 1. Seq2Se2
