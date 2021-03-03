@@ -8,6 +8,8 @@ Fullstack과 ML을 병행할 때의 어려움을 간접적으로 알 수 있었�
 **Normalization**
 - Data scaling
 - https://goodtogreate.tistory.com/entry/Neural-Network-%EC%A0%81%EC%9A%A9-%EC%A0%84%EC%97%90-Input-data%EB%A5%BC-Normalize-%ED%95%B4%EC%95%BC-%ED%95%98%EB%8A%94-%EC%9D%B4%EC%9C%A0
+- https://eunsukim.me/posts/understanding-normalization
+- Z-score normalization = standardization
 
 **Regularization**
 - overfitting 방지
