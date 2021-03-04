@@ -9,9 +9,13 @@ https://blog.lunit.io/2019/05/28/weight-standardization/
 
 ## NLP에 GAN을 적용한 사례
 Seq2Seq에서 불가능한 이유
+
 https://kh-kim.gitbook.io/natural-language-processing-with-pytorch/00-cover-11/01-intro
+
 ELECTRA
+
 https://misconstructed.tistory.com/47
+
 https://arxiv.org/pdf/2003.10555.pdf
 
 **gan deepfake**
