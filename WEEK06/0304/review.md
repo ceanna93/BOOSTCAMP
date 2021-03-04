@@ -19,4 +19,5 @@ https://misconstructed.tistory.com/47
 https://arxiv.org/pdf/2003.10555.pdf
 
 **gan deepfake**
+
 https://medium.com/@lennartfr/deepfakes-and-the-world-of-generative-adversarial-networks-bf6937e70637
