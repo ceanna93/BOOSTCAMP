@@ -43,6 +43,8 @@ loss가 줄어드는 쪽으로 학습이 되는게 딥러닝의 원리인데 los
 - 인코딩되어 있는 Seq 벡터가 있을 때, 해당 벡터의 크기(norm)는 해당 seq의 의미를 고려하는데 있어서 활용되면 안 될 것이다.
 - 따라서 이러한 텍스트 데이터에는 norm으로 표준화시켜주고 각도만을 고려해 유사도를 측정해주는 코사인 유사도를 많이 활용한다.
 
+https://ko.wikipedia.org/wiki/%EC%BD%94%EC%82%AC%EC%9D%B8_%EC%9C%A0%EC%82%AC%EB%8F%84
+
 ### 과적합을 막기 위한 딥러닝 기법들
 - DropOut
 - Early Stopping
