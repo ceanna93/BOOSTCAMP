@@ -56,7 +56,7 @@ teacher-student network
 - 임의의 데이터 unlabeled data 사용 가능
 
 semantic information is not considered in distillation
-내부 요소들의 의미가 중요한 것이 아니라 Soft Label을 따라 하는 것이 중요
+Teacher의 내부 요소들의 의미가 중요한 것이 아니라 Soft Label을 따라 하는 것이 중요
 
 Student Loss
 Hard label이 Ground truth 데이터셋에서 주어지기 때문에 crossentropy이용
