@@ -80,3 +80,15 @@ semi-supervised learning은 unlabeled data와 labeled data, 둘 다 활용하는
 
 Self-training
 Augmentation + Teacher-Student networks + semi-supervised learning
+
+
+### CNN
+pooling 레이어는 convolution layer의 출력을 입력으로 받아 출력 데이터의 크기를 줄이거나 특정 데이터를 강조하는 용도로 사용
+- Max Pooling
+- Average Pooling
+- Min Pooling
+
+목적
+1. input size가 줄어든다.
+2. 1로 인해 파라미터 수가 들어들어 Overfitting 방지가 가능
+3. 특징을 잘 뽑아낼 수 있다. 특정한 모양을 더 잘 인식할 수 있다.
