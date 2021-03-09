@@ -1,5 +1,5 @@
 FC(convolutional)L: 입력도 activation map(Tensor), 출력도 activation map 형태. 공간 정보를 유지한 상태로 operation 수행
-보통 1x1 convolution으로 구현
+보통 1\*1 convolution으로 구현
 
 각 위치마다 classification을 할 수 있을까.
 각 위치마다 채널 축으로 Flattening(Fully-connected)
