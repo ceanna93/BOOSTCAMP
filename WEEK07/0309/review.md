@@ -8,7 +8,7 @@ FC(convolutional)L: 입력도 activation map(Tensor), 출력도 activation map �
 필터 개수만큼 각 위치마다 FC 레이어를 별도로 돌려서 각각의 위치의 결과값을 채워넣는 것과 동일
 
 Stride와 pooling layer로 인해서 최종 activation map의 해상도는 굉장히 저해상도인 경우가 많다.
-저해상도 문제를 해결하기 위해 umsampling
+저해상도 문제를 해결하기 위해 upsampling
 stride, pooling을 하지 않으면 똑같은 수의 layer를 사용했을 때, receptive field size가 굉장히 작기 때문에 영상의 전반적인 context를 파악하지 못하는 문제가 있다.
 따라서 우선 작게 만들어 receptive field는 최대한 키워놓고, upsampling을 통해 강제로 resolution을 맞춰준다.
 
