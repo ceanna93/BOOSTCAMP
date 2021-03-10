@@ -83,3 +83,10 @@ positive sample은 엄청 적은 반면 배경은 유용한 정보도 없으면�
 현재 연구 트렌드
 Detection with Transformer
 Detecting objects as points
+
+
+
+Analysis of model behaviors
+Nearest neightbors(NN) in a feature space
+의미론적으로 비슷한 컨셉들이 클러스터링 되어 있다.
+학습된 feature가 물체의 위치 변화에 굉장히 강인하게, 대신 컨셉을 잘 학습
