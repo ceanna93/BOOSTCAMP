@@ -1,5 +1,4 @@
-multi-modal
-
+### multi-modal
 modalities들은 표현 방식이 다르다
 
 1. 서로 다른 modality에서 오는 정보의 양도 다르고, feature space에 대한 특징들도 unbalance
