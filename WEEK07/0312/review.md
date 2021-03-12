@@ -11,11 +11,15 @@ modalities들은 표현 방식이 다르다
   2. Transalting
   3. Regerencing
 
+
+
 2. Multi-modal tasks (1) - Visual data &  text
   1. Text embedding
   2. Joint embedding
   3. Cross modal translation
   4. Cross modal reasoning
+
+
 
 3. Multi-modal tasks (2) - Visual data & Audio
   1. Sound representation
