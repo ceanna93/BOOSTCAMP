@@ -52,12 +52,12 @@ Pruning
 	- Information loss
 	- The granularity affects the efficiency of hardware acclerator design
 
-Dropout은 잘라낸 weight를 inference할 때 전부 복원한다. Training epoch에 따라 켜지는 weight도 달라진다.
+Dropout은 잘라낸 weight를 inference할 때 전부 복원한다. Training epoch에 따라 켜지는 weight도 달라진다. Pruning은 epoch이 바뀌어도 weight은 고정된다.
 
 Structured Pruning
-	- neuran을 잘라낸다.
+- neuran을 잘라낸다.
 Unstructured Pruning
-	- weight를 잘라낸다.
+- weight를 잘라낸다.
 
 Iterative pruning
 한 번에 weight를 줄여버리면 retrain을 해도 accuracy가 향상이 일어나지 않는다.
