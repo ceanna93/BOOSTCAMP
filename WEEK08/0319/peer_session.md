@@ -1,6 +1,6 @@
 ELECTRA 논문 리뷰
 
-N-Quuens
+### N-Quuens
 가장 먼저 발견한 정답을 출력
 1. DFS, BFS,
 2. DFID
