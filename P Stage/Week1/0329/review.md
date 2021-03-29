@@ -56,3 +56,38 @@ Exploratory Data Analysis
 
 #### Model
 Input + Model = Output
+
+
+## Competition EDA
++ 연령 분포 확인
+<img src="https://user-images.githubusercontent.com/12611645/112861072-6de15700-90ef-11eb-9821-136a7a9f4934.jpg" width="60%" height="50%" title="Age distribution" alt="NLPDiagram">
+
++ 성별 분포 확인
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;data["gender"].value_counts()
+
+<br />
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;female    1658
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;male      1042
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Name: gender, dtype: int64
+
+<br />
+
++ 연령 분류 후 분포 확인
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;data.loc[ data['age'] < 30, 'age'] = 0
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;data.loc[(data['age'] >= 30) & (data['age'] < 60), 'age'] = 1
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;data.loc[ data['age'] >= 60, 'age'] = 2
+
+<br />
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;0    1281
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1    1227
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2     192
