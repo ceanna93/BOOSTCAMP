@@ -49,3 +49,10 @@ Exploratory Data Analysis
 호기심들을 명제로 나열하는 작업이 도움이 된다.
 
 이후 코드로 구현하는 과정
+
+### Image Classification
+#### Image
+시각적인 인식을 표현한 인공물(Artifact)
+
+#### Model
+Input + Model = Output
