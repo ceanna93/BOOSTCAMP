@@ -69,3 +69,52 @@ Train Set 크기가 부족해도 Validation 하는 것이 필요
 전처리가 항상 좋은 결과만을 가져다 주는 것은 아님
 
 어떤 데이터 처리든 도메인, 문제에 따라 **실험으로 증명**
+
+## Data Generation
+빠른 training과 inference가 가능한 방향성
+
+Data Processing 단계
+
+### Data Feeding
+모델 학습을 할 때 모델이 처리하는 양에 비해 데이터 제공량이 부족하면 학습 속도가 떨어지게 된다. Data Generator의 속도가 Model의 성능을 따라가야 한다.
+
+Model의 성능을 높이기 위해서 최소한 Data Generator 속도가 더 빨라야 한다.
+
+두 작업의 속도를 높이는 것이 최상의 성능을 낼 수 있겠지만 현실적으로(GPU, 모델 변경 등) 어렵다.
+
+Dataset 생성 능력 비교
+- Compose에 ToTensor + RandomRotation: time 1.28...
+- Compose에 ToTensor + RandomRotation + Resize: time 3.65...
+- Compose에 ToTensor + Resize + RandomRotation: time 7.87...
+
+Resize 이후 RandomRotation을 할 때 시간이 더 오래 걸리는 이유는 이미지의 용량이 커진 이후 rotate 작업을 처리하기 때문에. 작업의 순서도 속도에 영향을 끼친다.
+
+Resize가 부하를 주기 때문에 Generating 속도가 느려진다.
+Compose 안에 transform을 넣을 때도 신중하게 넣고, tuning 해야한다.
+
+### torch.utils.data
+#### Dataset
+구조
+- init: CustomData 클래스가 처음 선언되었을 때 호출
+- getitem: CustomData의 데이터 중 index 위치의 아이템을 리턴
+- len: CustomData 아이템의 전체 길이
+
+#### DataLoader
+Custom Dataset을 효율적으로 사용할 수 있도록 관련 기능 추가
+
+MyDataset -> torch.utils.data.DataLoader -> (Batch, Channel, Height, Width)
+
+- batch_size: 데이터 추출 개수
+- num_workers: 사용할 Thread의 개수
+- drop_last: batch_size로 나누어 떨어지지 않는 부분을 option에 따라 나머지를 버릴지 결정
+
+병렬 처리와 Batch Size, Rest를 효율적으로 사용하기 위한 util
+
+collate_fn: 사용되는 경우가 많지는 않지만 batch마다 다른 작업을 해주고 싶은 경우 사용. batch 단위마다 다른 작업 적용이 가능
+
+#### Dataset과 DataLoader는 분리되는 것이 좋다.
+Dataset안에 DataLoader를 넣지 않는 이유: 재생산성
+- Dataset: Vanilla 데이터를 원하는 형태로 출력해주는 클래스
+- DataLoader: Dataset을 더 효율적으로 사용하기 위함
+
+DataLoader는 Dataset마다 만들 필요가 없음 (Dataset만 변경하여 DataLoader 재사용 가능)
