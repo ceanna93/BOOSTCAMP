@@ -87,3 +87,14 @@ ImageNet에 있는 Classifier는 1000개의 카테고리
 - Case 2. 학습 데이터가 충분하지 않은 경우
   + 상관 관계가 높다면 pretrained model을 사용하는 것을 추천
   + 상관 관계가 낮다면 pretrained model을 사용하지 않는 것을 추천
+
+
+## Pretrained
+https://www.analyticsvidhya.com/blog/2020/08/top-4-pre-trained-models-for-image-classification-with-python-code/
+
+Top-4 Pre-Trained Models for Image classification
+Pre-Trained Models for Image Classification
+- VGG-16
+- ResNet50
+- Inceptionv3
+- EfficientNet
