@@ -118,3 +118,60 @@ Dataset안에 DataLoader를 넣지 않는 이유: 재생산성
 - DataLoader: Dataset을 더 효율적으로 사용하기 위함
 
 DataLoader는 Dataset마다 만들 필요가 없음 (Dataset만 변경하여 DataLoader 재사용 가능)
+
+
+## Dataset
+<pre>
+<code>
+class MaskDataset(Dataset):
+    def __init__(self, data_root, input_size, transform=None):
+        self.infos = self._load_info_list(data_root)
+        self.len = len(self.infos)
+        self.input_size = input_size
+        self.transform = transform
+        
+    def __getitem__(self, index):
+        img_path = self.infos[index]["image"];
+        
+        img = PIL.Image.open(img_path)
+        if self.transform:
+            img = self.transform(img)
+        
+        # Ground Trueth
+        label = self._get_class_idx_from_img_name(img_path) * 6 + self.infos[index]["gender"] * 3 + self.infos[index]["age"];
+        
+        return img, label
+    
+    def __len__(self):
+        return self.len
+    
+    def _load_info_list(self, data_root):
+        csv_file = data_root[1:] + "/train.csv"
+        info_list = []
+        df = pd.read_csv(csv_file)
+        
+        df.loc[ df['age'] < 30, 'age'] = 1
+        df.loc[(df['age'] >= 30) & (df['age'] < 60), 'age'] = 2
+        df.loc[ df['age'] >= 60, 'age'] = 3
+        
+        df.loc[ df['gender'] == 'male', 'gender'] = 1
+        df.loc[ df['gender'] != 'male', 'gender'] = 2
+        
+        for index, row in df.iterrows():
+            gender = row['gender']
+            age = row['age']
+            for files in glob(row['path'] + '/*'):
+                info_list.append([{"gender": gender, "age": age, "image": files}])
+
+        return info_list
+
+    def _get_class_idx_from_img_name(self, img_path):
+        img_name = os.path.basename(img_path)
+
+        if 'incorrect' in img_name: return 1
+        elif 'mask' in img_name: return 0
+        elif 'normal' in img_name: return 2
+</code>
+</pre>
+
+Dataset의 infos에 {"gender": 0~1, "age": 0~3, "image": 이미지 경로} 값을 넣어준다.
