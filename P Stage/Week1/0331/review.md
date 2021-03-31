@@ -93,7 +93,6 @@ ImageNet에 있는 Classifier는 1000개의 카테고리
 https://www.analyticsvidhya.com/blog/2020/08/top-4-pre-trained-models-for-image-classification-with-python-code/
 
 Top-4 Pre-Trained Models for Image classification
-Pre-Trained Models for Image Classification
 - VGG-16
 - ResNet50
 - Inceptionv3
