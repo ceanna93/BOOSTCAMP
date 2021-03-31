@@ -124,10 +124,10 @@ DataLoader는 Dataset마다 만들 필요가 없음 (Dataset만 변경하여 Dat
 <pre>
 <code>
 class MaskDataset(Dataset):
-    def __init__(self, data_root, input_size, transform=None):
+    def __init__(self, data_root, transform=None):
+        data_root = data_root[1:]
         self.infos = self._load_info_list(data_root)
         self.len = len(self.infos)
-        self.input_size = input_size
         self.transform = transform
         
     def __getitem__(self, index):
@@ -146,7 +146,7 @@ class MaskDataset(Dataset):
         return self.len
     
     def _load_info_list(self, data_root):
-        csv_file = data_root[1:] + "/train.csv"
+        csv_file = f'{data_root}/train.csv'
         info_list = []
         df = pd.read_csv(csv_file)
         
@@ -155,12 +155,12 @@ class MaskDataset(Dataset):
         df.loc[ df['age'] >= 60, 'age'] = 3
         
         df.loc[ df['gender'] == 'male', 'gender'] = 1
-        df.loc[ df['gender'] != 'male', 'gender'] = 2
+        df.loc[ df['gender'] == 'female', 'gender'] = 2
         
         for index, row in df.iterrows():
             gender = row['gender']
             age = row['age']
-            for files in glob(row['path'] + '/*'):
+            for files in glob(f'{data_root}/images/{row["path"]}/*'):
                 info_list.append({"gender": gender, "age": age, "image": files})
 
         return info_list
