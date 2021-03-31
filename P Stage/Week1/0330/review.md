@@ -161,7 +161,7 @@ class MaskDataset(Dataset):
             gender = row['gender']
             age = row['age']
             for files in glob(row['path'] + '/*'):
-                info_list.append([{"gender": gender, "age": age, "image": files}])
+                info_list.append({"gender": gender, "age": age, "image": files})
 
         return info_list
 
@@ -175,3 +175,5 @@ class MaskDataset(Dataset):
 </pre>
 
 Dataset의 infos에 {"gender": 0~1, "age": 0~3, "image": 이미지 경로} 값을 넣어준다.
+
+DataLoader에서 오류가 
