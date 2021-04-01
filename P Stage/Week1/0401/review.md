@@ -105,3 +105,5 @@ DataLoader -> Model(Pretrained Model) + Loss + Optimizer + Metric
 - Focal Loss
 	- https://pypi.org/project/focal-loss-torch/
 	- pip install focal_loss_torch
+- F1 Score를 위한 F1 Loss 함수
+	- https://gist.github.com/SuperShinyEyes/dcc68a08ff8b615442e3bc6a9b55a354
