@@ -100,3 +100,8 @@ DataLoader -> Model(Pretrained Model) + Loss + Optimizer + Metric
 
 카테고리한 클래스를 최종 output으로 변환
 
+## Data Imbalance
+- Data Augmentation
+- Focal Loss
+	- https://pypi.org/project/focal-loss-torch/
+	- pip install focal_loss_torch
