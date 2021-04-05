@@ -21,3 +21,8 @@
   - 입고 있는 옷의 디자인/색(현란한 옷을 입는 특정 연령대가 있지 않을까)이 영향을 끼치지 않을까
 2. CenterCrop
   - 사진에서 멀리 떨어져서 찍은 사진의 경우 CenterCrop이 효과가 좋겠지만 카메라와 아주 가까이에서 찍은 사진들이 있다. 이러한 사진을 CenterCrop하게 되면 얼굴만 학습에 사용될 수 있다(얼굴만 사용되면 연령을 판단하기 위한 목 주름, 옷, 성별을 판단하는데 많이 사용되는 기준인 머리가 포함되지 않은 위험이 있다고 생각)
+3. Shuffle이 필요한 이유(시계열 데이터 제외)
+  - [Shuffling data serves the purpose of reducing variance and making sure that models remain general and overfit less.](https://datascience.stackexchange.com/questions/24511/why-should-the-data-be-shuffled-for-machine-learning-tasks)
+
+---------------------------------
+Sampler를 쓰게 되면 Shuffle 값을 False로 해줘야 한다.
