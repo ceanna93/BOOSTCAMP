@@ -12,7 +12,8 @@
 |---|:---:|---:|
 |Score|74.2857%	| 0.6568 |
 
-### Validation 분리
+### 현재 학습
+#### Validation 분리
 <pre>
   <code>
 os.makedirs(os.path.join(os.getcwd(), 'results', name), exist_ok=True)
@@ -40,3 +41,10 @@ K-Fold와 Epoch이 있을 때, K-Fold 내부에 epoch을 돌린다.
 fit 함수를 별도로 만들어 생성한 train_loader와 validation_loader를 파라미터로 넘겨준다.
 
 K-Fold 5, epoch 10 training...
+
+#### Transform
+- CenterCrop
+- CutMix
+
+### 시도해볼 수 있는 방법
+작은 파라미터의 모델 사용 (피어세션에서 데이터셋이 작은 경우 파라미터가 큰 모델을 사용할 때 변수가 잘 설정되지 않아 학습이 잘 되지 않을 수 있다는 설명)
