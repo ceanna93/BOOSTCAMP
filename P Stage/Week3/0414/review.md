@@ -54,3 +54,6 @@ Cosine similarity가 높다고 하더라도 의미론적으로 유사하지 않�
 문제.
 1. 데이터가 너무 적다. 동문서답
 2. 감정 분석이 불가능하다.
+
+### WordPiece
+https://velog.io/@nawnoes/Huggingface-tokenizers%EB%A5%BC-%EC%82%AC%EC%9A%A9%ED%95%9C-Wordpiece-Tokenizer-%EB%A7%8C%EB%93%A4%EA%B8%B0
