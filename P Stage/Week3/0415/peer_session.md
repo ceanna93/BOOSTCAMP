@@ -12,6 +12,10 @@ absolute를 변경하면 상대 경로로 사용 가능
 
 베이스라인 코드에서 pretrained된 모델을 사용하고 있지 않기 때문에 코드를 수정해줘야 한다.
 
+BERT에서 CLS 토큰을 이용하는 게 반드시 성능이 좋지는 않을 수 있다.
+- https://stackoverflow.com/questions/62705268/why-bert-transformer-uses-cls-token-for-classification-instead-of-average-over
+- https://stackoverflow.com/questions/60087613/why-take-the-first-hidden-state-for-sequence-classification-distilbertforsequen
+
 #### Augmentation 방법
 - 번역을 두 번 해서 한국어로 다시 번역된 데이터를 데이터에 추가
 - 다른 나라 말로 번역해서 해당 언어로 학습하는 방법
