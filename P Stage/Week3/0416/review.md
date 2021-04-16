@@ -34,3 +34,21 @@
 
 ## 단일 문장 분류 task
 주어진 문장이 어떤 종류의 범주에 속하는지를 구분하는 task
+
+
+# 개인 공부
+### Competition
+성능 향상 시도 가능 방법
+1. Multi Sentence에서 \[SEP\] 토큰을 제거하여 Single sentence로 변경하여 학습
+2. Tokenizer를 변경
+3. [Kakao의 pororo](https://github.com/kakaobrain/pororo)를 이용한 Data augmentation
+4. Trainer의 Loss 변경
+	- 방법은 Trainer 객체 상속 후 compute_loss 메서드를 오버라이딩
+5. AutoModel 사용
+	- [AutoModel](https://huggingface.co/transformers/v3.0.2/model_doc/auto.html), AutoConfig 파악 필요
+6. ~~Tokenizer의 max_length변경~~
+	- Bert에서 300으로 변경 후 시도 시 Accuracy 하락
+	- 분포에서 가장 많은 값보다 적당한 값 탐색 필요
+7. entity embedding 추가
+8. Soft label
+	- task가 어려울수록 학습이 잘 된다.
