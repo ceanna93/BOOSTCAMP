@@ -11,3 +11,6 @@ Information Retrieval Question and Answering (IRQA)
 
 ## 실습
 가장 뒷단에 paraphrase detection 모델을 부착. 유사한 Top N 개를 이진 분류를 통해 유사한지 아닌지 판단.
+
+### Competition
+R-BERT에서 토큰을 구분할 때 add_token으로 $와 #이 아닌 토큰을 추가하는 작업 필요
