@@ -15,4 +15,6 @@ NER fine-tuning with BERT
 
 형태소 단위로 토큰을 음절 단위의 토큰으로 분해하고, Entitiy tag 역시 음절 단위로 매핑시켜 주어야 한다. (추천)
 
-## 실습
+## 시도
+학습을 할 때 ForSequenceClassification이 아닌 다른 방법은 없을까.
+토론의 Q&A와 같은 방법을 사용할 수 없을까.
