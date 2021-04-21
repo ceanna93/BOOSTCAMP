@@ -37,6 +37,13 @@ ner로 구분된 tag를 이용하는 방법을 사용할 수 없을까 시험 (�
 2. tokenize 방법을 다르게 해도 된다.
 3. 위의 ner 적용이 조금 더 쉽게 느껴진다.
 
+[relation extraction 모델은 어떻게 entity를 인식할까 by 초코송이](http://boostcamp.stages.ai/competitions/4/discussion/post/199)에서 제시한 방법처럼 ner을 이용하여 여러 구분 방법을 시도해봤는데 <spk> 구분 방법이 가장 높은 점수가 나왔다. [SPECIAL]처럼 넣었을 때 0.4 정도 낮게 나오고, special token을 추가하지 않고 많이 사용되지 않는 단어들을 넣었을 때 오히려 성능이 떨어지는데 [UNK] 처리돼서 그런 것 같다고 추측한다. 사용한 문자들은 ※, ∧, §, ¿. 
+  
+위 순서대로 각 점수는 아래.
+77.1000% > 76.7000% > 75.8000%
+
+하이퍼 파라미터는 seed가 가장 마지막에서 달라지고 나머지는 모두 동일한 조건으로 수행했다.
+
 ## 오피스아워
 - EDA
 (Easy Data Augmentation Techniques for Boosting Performance on Text Classification Tasks)
