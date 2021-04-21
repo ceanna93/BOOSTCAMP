@@ -19,3 +19,27 @@ fine-tuning에서 사용되는 layer 자체도 언어
 + Few-shot, One-shot, Zero-shot은 gradient updates를 하지 않는다.
 + 원하는 task에 대한 힌트를 얼마나 주느냐의 차이
 
+## 개인 공부
+Competiton 프로젝트를 Github에 연동하는 것이 가능한지 확인 필요
+
+Soft Voting + 
+ner로 구분된 tag를 이용하는 방법을 사용할 수 없을까 시험 (예를 들어, entity1의 ner이 PERSON인데 labeling된 값이 단체:제작 식으로 나오면 당연히 틀린 labeling이기 때문에 이러한 점을 구분할 수 없을지 확인 필요. 하지만 entity2까지 ner 값을 이용하면 결과가 안 좋을 확률이 높아보임. ner이 완벽하지 않아 사람인데, Civilization 또는 O으로 tagging이 되는 경우처럼 올바르지 않은 값으로 tagging이 될 수 있기 때문에. 문장 단위 ner을 적용하면 단체나 사람은 구분을 꽤 정확하게 하는 것으로 보임
+
+(예)
+한편, # β ORGANIZATION β bhc치킨#은 배달의민족 ‘@ α PERSON α 배민오더@’ 도입을 기념해 기존 배달 선호 고객을 위한 별도의 프로모션을 마련했다.
+
+## 오피스아워
+- EDA
+(Easy Data Augmentation Techniques for Boosting Performance on Text Classification Tasks)
+- Back Translation
+- Monolingual Semi-Supervised Learning
+- Transformer
+
+------------
+
+- 포트폴리오엔 구심점이 필요하다.
+  - 오픈소스
+  - 블로그
+- 문제인식과 문제해결 능력을 어필하기
+- 블로그/커뮤니티에 자기 PR
+- 과정 Github에 정리
