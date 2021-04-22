@@ -27,6 +27,7 @@
 - learning_rate
 - batch_size
 - tokenizer의 max_length
+- seed
 
 ## 성공/실패 경험
 - Transformer 함수 변경
