@@ -20,7 +20,9 @@
 
 #### Tokenize
 - 엔티티 사이의 토큰 변경 (두 개의 문장이 아니라 하나의 문장으로 인식하게 만들려는 의도)
+    - 대괄호와 
 - Typed entity marker
+- KoBertTokenizer
 
 #### Hyper parameter
 - label_smoothing_factor
