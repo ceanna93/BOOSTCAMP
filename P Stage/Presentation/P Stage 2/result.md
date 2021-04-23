@@ -1,7 +1,7 @@
 # Wrap up report
 ## 기술적인 도전
 ### I. 일정
-<img src="https://user-images.githubusercontent.com/12611645/115821802-6e46e680-a43e-11eb-9100-992b9d94fb7c.JPG">
+<img src="https://user-images.githubusercontent.com/12611645/115821802-6e46e680-a43e-11eb-9100-992b9d94fb7c.JPG" width="80%" height="80%" title="P Stage 2 process" alt="chart"></img>
 
 ### II. 각 작업
 1. EDA
