@@ -55,6 +55,7 @@
 
 ### III. Accuracy 변화
 <img src="https://user-images.githubusercontent.com/12611645/115822186-165caf80-a43f-11eb-811f-0abdb75c6bca.JPG">
+
 - 붉은선: xlm-roberta-large 사용
 - 녹색선: 앙상블
 
