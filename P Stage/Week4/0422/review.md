@@ -69,3 +69,89 @@ multi-modal 연구는 필수
     - BERT와 구조가 동일.
     - 이 모델은 앞에는 이미지 토큰에 대한 embedding vector를 넣고, SEP 토큰 다음에는 자연어에 대한 embedding vector를 넣어 이미지 토큰과 자연어 토큰을 하나로 합쳐 CLS 토큰을 만들어내고 이 위에 Classification layer를 부착하여 multi-modal 정보를 통해 분류를 하는 task 수행 가능
 4. Dall-e
+
+## Competition
+### 앙상블
+#### inference.py
+Soft ensemble
+<pre>
+<code>
+def ensemble_inference(xml_model, hyper_model, koelec_model, bert_model, tokenzied_sent_set, device):
+  dataloader = DataLoader(tokenzied_sent_set, batch_size=40, shuffle=False)
+  xml_model.eval()
+  hyper_model.eval()
+  koelec_model.eval()
+  bert_model.eval()
+  output_pred = []
+  
+  print(tokenzied_sent_set)
+  for i, data in enumerate(dataloader):
+    with torch.no_grad():
+      xml_pred = xml_model(
+          input_ids=data[0]['input_ids'].to(device),
+          attention_mask=data[0]['attention_mask'].to(device)
+          )
+      hyper_pred = hyper_model(
+          input_ids=data[1]['input_ids'].to(device),
+          attention_mask=data[1]['attention_mask'].to(device)
+          )
+      koelec_pred = koelec_model(
+          input_ids=data[2]['input_ids'].to(device),
+          attention_mask=data[2]['attention_mask'].to(device),
+          token_type_ids=data[2]['token_type_ids'].to(device)
+          )
+      bert_pred = bert_model(
+          input_ids=data[3]['input_ids'].to(device),
+          attention_mask=data[3]['attention_mask'].to(device),
+          token_type_ids=data[3]['token_type_ids'].to(device)
+          )
+    xml_logits = xml_pred[0]
+    hyper_logits = hyper_pred[0]
+    koelec_logits = koelec_pred[0]
+    bert_logits = bert_pred[0]
+    st = torch.stack([xml_logits, hyper_logits, koelec_logits, bert_logits])
+    pred = torch.mean(st, dim=0)
+    pred = pred.argmax(dim=-1)
+    output_pred.append(pred.cpu().numpy())
+  
+  return np.array(output_pred).flatten()
+</code>
+</pre>
+
+load_data.py
+<pre>
+<code>
+class ENSEMBLE_Dataset(torch.utils.data.Dataset):
+  def __init__(self, xml_tokenized_dataset, hyper_tokenized_dataset, koelec_tokenized_dataset, bert_tokenized_dataset, labels):
+    self.xml_tokenized_dataset = xml_tokenized_dataset
+    self.hyper_tokenized_dataset = hyper_tokenized_dataset
+    self.koelec_tokenized_dataset = koelec_tokenized_dataset
+    self.bert_tokenized_dataset = bert_tokenized_dataset
+    self.labels = labels
+
+  def __getitem__(self, idx):
+    xitem = {key: torch.tensor(val[idx]) for key, val in self.xml_tokenized_dataset.items()}
+    xitem['labels'] = torch.tensor(self.labels[idx])
+    hitem = {key: torch.tensor(val[idx]) for key, val in self.hyper_tokenized_dataset.items()}
+    hitem['labels'] = torch.tensor(self.labels[idx])
+    kitem = {key: torch.tensor(val[idx]) for key, val in self.koelec_tokenized_dataset.items()}
+    kitem['labels'] = torch.tensor(self.labels[idx])
+    bitem = {key: torch.tensor(val[idx]) for key, val in self.bert_tokenized_dataset.items()}
+    bitem['labels'] = torch.tensor(self.labels[idx])
+    return xitem, hitem, kitem, bitem
+
+  def __len__(self):
+    return len(self.labels)
+</code>
+</pre>
+단일 모델 별 accuracy 점수로 가중치를 주는 weighted ensemble 방법 시도
+<pre>
+<code>
+    xml_logits = xml_pred[0].mul(0.77)
+    hyper_logits = hyper_pred[0].mul(0.78)
+    koelec_logits = koelec_pred[0].mul(0.74)
+    bert_logits = bert_pred[0].mul(0.40)
+</code>
+</pre>
+
+bert 모델의 경우 accuracy 확인을 하지 못 해 0.4로 가중치를 줬는데 0.1% 상승
