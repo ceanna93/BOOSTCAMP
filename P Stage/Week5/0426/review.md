@@ -172,6 +172,19 @@ slot_meta.json 파일에 정리
 
 ## WoS의 Value
 **Value**는 2320개.
+
+```
+import json
+
+with open("C:/Users/AnnaLee/Desktop/data/train_dataset/ontology.json", "r", encoding='UTF8') as st_json:
+    st_python = json.load(st_json)
+    sum = 0
+    for item in st_python:
+        print(f"<li>{item}: {len(st_python[item])}</li>")
+        sum += len(st_python[item])
+    print(sum)
+```
+
 <details>
 <summary>Slot 당 Value 개수</summary>
 <div markdown="1">
@@ -234,3 +247,12 @@ Slot 당 Value가 어떻게 이루어져있는지 예
 - "dontcare"
 - "yes"
 - "no"
+
+## Bigram / Trigram
+### N-gram
+n-gram은 n개의 연속적인 단어 나열을 의미합니다. 갖고 있는 코퍼스에서 n개의 단어 뭉치 단위로 끊어서 이를 하나의 토큰으로 간주합니다. 예를 들어서 문장 An adorable little boy is spreading smiles이 있을 때, 각 n에 대해서 n-gram을 전부 구해보면 다음과 같습니다.
+- unigrams : an, adorable, little, boy, is, spreading, smiles
+- bigrams : an adorable, adorable little, little boy, boy is, is spreading, spreading smiles
+- trigrams : an adorable little, adorable little boy, little boy is, boy is spreading, is spreading smiles
+- 4-grams : an adorable little boy, adorable little boy is, little boy is spreading, boy is spreading smiles
+
