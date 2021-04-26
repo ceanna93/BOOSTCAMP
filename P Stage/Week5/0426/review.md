@@ -69,3 +69,18 @@ Abstractive한 속성을 지니는 Boolean Type의 Slot이나 "dontcare"나 "non
 ### State Update
 매 turn마다 Slot의 value를 추론.
 DST는 value의 변화를 감지해야 하기 때문에 State Update 담당
+
+## Wizard-of-Seoul (WOS)
+### 1. Introduction to Wizard-of-Seoul
+#### 1.1 Overview
+Multi-Domain Dialogue State Tracking
+
+#### 1.3 Data Construction
+Wizard-of-Oz framework
+
+System role은 사림인 척하는 system.
+
+Easy-to-Follow Goal Instruction
+
+#### 2.1 DSTEvaluator
+None이 포함되기 때문에 Ground Truth와 길이가 다를 수 있다. 길이가 다르더라도 turn slot accuracy의 평가는 0이 아닐 수 있다. 하지만 길이가 다르면 joint goal accuracy는 0이 된다.
