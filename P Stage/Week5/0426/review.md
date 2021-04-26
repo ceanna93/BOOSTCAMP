@@ -180,7 +180,7 @@ with open("C:/Users/AnnaLee/Desktop/data/train_dataset/ontology.json", "r", enco
     st_python = json.load(st_json)
     sum = 0
     for item in st_python:
-        print(f"<li>{item}: {len(st_python[item])}</li>")
+        print(f"{item}: {len(st_python[item])}")
         sum += len(st_python[item])
     print(sum)
 ```
