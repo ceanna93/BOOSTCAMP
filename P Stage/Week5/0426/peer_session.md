@@ -4,4 +4,6 @@
 - https://www.youtube.com/playlist?list=PLuHgQVnccGMCNJESahrVV-uYGMNYK_vMf
 - https://desktop.github.com/
 
-Notion에 Ground Rule
+Notion에 Ground Rule 정리
+
+내일까지 각자 EDA
