@@ -87,7 +87,6 @@ with open("C:/Users/AnnaLee/Desktop/data/train_dataset/train_dials.json", "r", e
     st_python = json.load(st_json)
     domain_dict = defaultdict(list)
     for item in st_python:
-        i = 0
         for domain in item['domains']:
             for dlg in item['dialogue']:
                 if dlg['role'] == 'user':
@@ -130,4 +129,4 @@ TRIGRAM: [('알 수 있을까요?', 212), ('서울 중앙에 있는', 209), ('�
 + ner이나 BIO를 활용할 방법은 없을까.
 
 ### SUMBT 정리
-
+[SUMBT: Slot-Utterance Matching for Universal and Scalable Belief Tracking](https://arxiv.org/pdf/1907.07421.pdf)
