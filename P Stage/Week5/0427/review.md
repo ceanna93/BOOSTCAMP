@@ -47,4 +47,32 @@ BERT를 이용한 Current turn[r_t, u_t] 인코딩
 System Response & User Utterance at current turn step
 
 시스템 발화와 사용자 발화를 인코딩
-### U_t = BERT([x
+### U_t = BERT([x^{sys}_t, x^{usr}_t])
+
+BERT_sv를 이용한 Slot, Value 인코딩
+- [CLS] 토큰을 이용한 Pooling
+- 실제론 Freezed encoder를 통해 미리 Ontology 안의 모든 Slot, Value들을 Pre-encoding 후 Lookup
+
+Ontology에 속하는 Slot, Value들을 미리 vector로 만들고 encoder는 빼버린다.
+
+q^s = BERT_{sv}(x^s),
+y^v_t = BERT_{sv}(x^v_t).
+
+### 3.3 Slot-Utterance Matching
+Multi-head Attention 을 통한 현재 턴 발화들에 대해 Slot s를 Query로 한 Aggregation
+- Query: Slot s vector q^s
+- Key: Current Turn t encoding U^t
+- Value: Current Turn t encoding U^t
+
+=> h^s_t
+
+### 3.4 GRU-based State Contextualizing
+GRU를 이용한 현재 Turn에서 Slot s에 대한 State를 Context turns State에 대하여 Contextualize
+- Input: h^s_t == Slot s를 Query로 하여 Turn t를 aggregation한 vector
+- Output: d^s_t == 이전 Turn (t-1)에서 Slot s에 대한 hidden state와 gating을 통해 update 된 현재 Turn hidden state
+- Layer Normalization을 통해 최종 현재 Turn t에서 Slot s에 대한 representation
+**\hat{y}^s_t**
+
+### 3.5 Non-Parametric Scoring
+Distance function
+
