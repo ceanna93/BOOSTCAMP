@@ -73,5 +73,4 @@
   ```
   dev_labels에 들어있는 key값을 predictions에 넣어줘야 한다.
   dev_loader를 할당하는 부분을 살펴보면 ```dev_loader = DataLoader(dev_data, batch_size=8, sampler=dev_sampler, collate_fn=processor.collate_fn)```로 되어 있다. 
-  collate_fn에는 guid가 들어가있고 이 guid가 dev_labels의 key값과 동일하다. batch에서 값을 가져오는 부분을 보면 guids가 있기 때문에 predictions\[guids\]에 recover_state한 값을 사용해줬다
-  학습하는 데 시간이 오래 걸려서 결과를 확인하지 못 하고 있다.
+  collate_fn에는 guid가 들어가있고 이 guid가 dev_labels의 key값과 동일하다. batch에서 값을 가져오는 부분을 보면 guids가 있기 때문에 predictions\[guids\]에 recover_state한 값을 사용해줬다. 학습하는 데 시간이 오래 걸려서 결과를 확인하지 못 하고 있다.
