@@ -13,12 +13,14 @@ stratified k fold나, 다른 validation 방법 필요. 각 도메인 별 비율�
 
 tokenizer = BertTokenizer.from_pretrained('kykim/bert-kor-base')
 
+tokenizer에 사용되는 pretrained된 방법을 바꿔줘도 성능 향상에 효과가 있다.
+
 train에 없는 데이터는 SUMBT에서 처리해주지 못 한다.
-SUMBT를 사용할 거라면 부족한 데이터를 채워넣을 필요.
+=> SUMBT를 사용할 거라면 부족한 데이터를 채워넣을 필요.
 
 
-Unseen Slot Value와 CounterFactuals
-위 두가지에 대한 고려 필요
+**Unseen Slot Value**와 **CounterFactuals**
+=> 두가지에 대한 고려 필요
 
 Open-Vocab based DST model
-없는 데이터도 유추가 가능한지 확인
+=> 없는 데이터도 유추가 가능한지 확인
