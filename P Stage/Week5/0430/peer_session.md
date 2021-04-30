@@ -30,3 +30,5 @@ tokenize 쪽에서 vocab을 받아와 pretrained된 값을 사용.
 
 ### seed 42 이유!
 https://en.wikipedia.org/wiki/42_(number)#The_Hitchhiker's_Guide_to_the_Galaxy
+
+구글에 "What is The Answer to the Ultimate Question of Life, the Universe, and Everything?" 검색
