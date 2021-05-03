@@ -39,3 +39,5 @@ Open-Vocab 모델
 - Unseen domain evaluation
 
 
+# Competition
+강의의 TRADE Github 페이지에 가보면 [create_data.py](https://github.com/jasonwu0731/trade-dst/blob/master/create_data.py) 파일로 전처리를 해주는 부분이 있다. 약어나 잘못된 맞춤법/오타를 교정해주는데, Wizard-of-Seoul 데이터에도 잘못된 맞춤법이 있다. 이러한 부분을 수정해주면 성능이 개선되지 않을까 생각했지만 잘못된 단어, 맞춤법 등을 어떻게 수정해줘야 하는지가 어렵다. 관련 딥러닝 정보도 대부분 영어로 되어 있다.
