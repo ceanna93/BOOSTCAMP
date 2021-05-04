@@ -136,7 +136,7 @@ Trainer를 Customize하는 방법
 1. Trainer를 상속받아 오버라이딩을 진행(Trainer에 있는 함수를 덮어쓰는 방법)
 2. 나만의 Trainer를 만든다.(추천)
 
-## Additional Guide
+### Additional Guide
 모델 구조 뜯어보기
 - 중심이 되는 Pretrained model 뜯어보기
 (Huggingface Transformers Document 적극 활용)
