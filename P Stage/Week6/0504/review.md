@@ -101,3 +101,6 @@ Slot -> Operation -> Value (value를 복사, 삭제, 수정)
 
 UPDATE의 경우에만 Slot-value generator에서 generation value를 예측하게 된다.
 
+# Competition
+발화 중 에어비엔비를 찾고 있다는 내용이 있는데 이를 숙소로 변경하면 에어비엔비를 숙소명으로 사용하는 부분에서 문제가 될 수 있다.
+
