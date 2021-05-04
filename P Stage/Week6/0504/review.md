@@ -104,3 +104,51 @@ UPDATE의 경우에만 Slot-value generator에서 generation value를 예측하�
 # Competition
 발화 중 에어비엔비를 찾고 있다는 내용이 있는데 이를 숙소로 변경하면 에어비엔비를 숙소명으로 사용하는 부분에서 문제가 될 수 있다.
 
+## 오피스아워
+### Huggingface
+스타트업 회사에서 NLP를 조금 더 쉽게 하기 위한 라이브러리
+Pretrained된 모델을 제공
+
+Trainer is all you need라고 할 수 있지만 위험한 생각
+
+모델 학습
+- Configuration
+- Tokenizer
+- Models
+학습 테크닉
+- Trainer
+
+Configuration
+-> 기존의 어떤 모델이 특정 layer
+
+Model과 Tokenizer는 하나의 SET!
+
+다른 Tokenizer를 사용하면 발생하는 문제
+1. 사전 학습된 모델을 사전에 학습된 tokenizer와 동일하게 사용하지 않으면 단어의 이점을 누릴 수 없음
+2. 여러 tokenizer를 사용할 경우 special token이 UNK 토큰으로 인식될 수 있음
+=> 사전 학습 모델도 다시 학습을 시켜야 할 수 있음
+
+KoBERT의 경우 tokenizer가 huggingface의 tokenizer가 아니다. 기존의 BERT 모델과는 다르다.
+
+**Trainer**
+- 더 많은 기능을 쓰려명 Callback을 활용!
+Trainer를 Customize하는 방법
+1. Trainer를 상속받아 오버라이딩을 진행(Trainer에 있는 함수를 덮어쓰는 방법)
+2. 나만의 Trainer를 만든다.(추천)
+
+## Additional Guide
+모델 구조 뜯어보기
+- 중심이 되는 Pretrained model 뜯어보기
+(Huggingface Transformers Document 적극 활용)
+
+왜 + 어떻게 돌아가는지 정확히 파악
+
+DST의 어려움
+- 코드 한 줄로 적용하는 것이 불가능
+- 기존의 논문을 한국어로 변경하는 작업이 어려움
+- SUMBT나 TRADE를 변경하는 작업보다 Dialogue를 이해하는 것을 추천
+
+많은 연구자들이 성능을 높이기 위해 노력하는 것처럼 DST는 어려운 분야고 논문이 가장 최신의 기술을 다루는 것일 수밖에 없다.
+=> 강의는 논문으로 구성될 수밖에 없다.
+
+SUMBT와 TRADE를 명확히 이해하면 DST가 어떤 분야인지 경험하는 것을 추천
