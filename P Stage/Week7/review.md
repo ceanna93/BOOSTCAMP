@@ -76,3 +76,6 @@ Few shot에서 좋은 성능
 적용하기 어려운 SOM-DST 문제들
 
 어떤 조건으로 inference 과정에서 id 뒤에 숫자가 포함되는지. eval_dials의 첫 번째 dialouge를 보면 대화의 개수는 8개(사용자, 시스템 대화를 한 개로 계산)로 8개의 dialogue state가 predection 파일에 저장되어 있음
+
+# 오피스아워
+https://en.wikipedia.org/wiki/Human%E2%80%93computer_interaction
