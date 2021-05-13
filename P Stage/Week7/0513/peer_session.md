@@ -1,3 +1,7 @@
+### CUDA index error
+CPU로 실행하면 어느 부분에서 오류가 발생하는지 확인 
+
+## 멘토링
 ### 포트폴리오 정리
 - 문제 제기
 - 문제 정의
@@ -10,4 +14,3 @@
 
 #### ML Ops 직무
 GPU Multiprocessing
-
