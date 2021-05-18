@@ -1,4 +1,5 @@
 ## Competition
+SOM-DST 실행 
 ```
 [30/30] [0/1318] mean_loss : 0.162, state_loss : 0.111, gen_loss : 0.051, dom_loss : 0.000
 [30/30] [100/1318] mean_loss : 0.185, state_loss : 0.034, gen_loss : 0.042, dom_loss : 0.000
