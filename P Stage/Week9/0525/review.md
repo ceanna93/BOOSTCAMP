@@ -66,6 +66,7 @@ Max Sequence length는 하이퍼파라미터. **DKT에서는 padding을 앞에 �
 8. Blending/Stackin/Ensembling(Seed Ensemble도 있다.)
 9. 마지막 tuning
 
+베이스라인에는 continuous는 없이 categorical만 있다.
 
 # Competition
 ### 의문
