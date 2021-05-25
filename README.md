@@ -32,3 +32,5 @@
 - [Week6](https://github.com/ceanna93/BOOSTCAMP/tree/main/P%20Stage/Week6)
 - [Week7](https://github.com/ceanna93/BOOSTCAMP/tree/main/P%20Stage/Week7)
 
+#### Github 사용법
+https://github.com/ceanna93/BOOSTCAMP/blob/main/P%20Stage/Week9/0525/Github%20%EC%82%AC%EC%9A%A9%EB%B2%95.md
