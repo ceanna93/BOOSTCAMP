@@ -78,7 +78,9 @@ Max Sequence length는 하이퍼파라미터. **DKT에서는 padding을 앞에 �
 5. 접근 방법.
     - 전체 데이터를 넣고 1/0을 출력하는 방법(Many-to-One)
     - Sequential하게 예측하여 가장 마지막에 1/0을 예측하는 방법(Many-to-Many)
+6. 더 많이 노출된 태그에 대해 bias를 주는 
 
 ### 참고
 + [Correctness prediction paper](https://arxiv.org/abs/2010.12042)
 + [Attention Mechanism](https://arxiv.org/pdf/2102.04250.pdf)
+
