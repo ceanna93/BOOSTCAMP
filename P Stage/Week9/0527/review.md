@@ -9,6 +9,8 @@ sequence데이터가 어떻게 주어지더라도 모델링을 할 수 있는 �
 
 사용자마다 몇 문제를 풀었는지 EDA
 ```
+stu_score_groupby = df.groupby('userID')
+
 plt.hist([len(x[1]['answerCode']) for x in stu_score_groupby])
 plt.show()
 ```
