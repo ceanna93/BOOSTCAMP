@@ -15,4 +15,4 @@ plt.show()
 
 <img src="https://user-images.githubusercontent.com/12611645/119823105-6394db00-bf2f-11eb-9a05-4eea27ae0352.png" width="500"/>
 
-x축이 푼 문제의 수, y축이 사용자의 
+x축이 푼 문제의 수, y축이 사용자의 수
