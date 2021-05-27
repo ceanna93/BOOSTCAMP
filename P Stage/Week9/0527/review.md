@@ -7,11 +7,10 @@ sequence데이터가 어떻게 주어지더라도 모델링을 할 수 있는 �
 ## Competition
 문제를 푼 개수를 feature에 추가한다면?
 
+사용자마다 몇 문제를 풀었는지 궁금하여 EDA
 ```
 plt.hist([len(x[1]['answerCode']) for x in stu_score_groupby])
 plt.show()
 ```
-
-위 코드 실행 시 아래 결과
 
 <img src="https://user-images.githubusercontent.com/12611645/119823105-6394db00-bf2f-11eb-9a05-4eea27ae0352.png" width="500"/>
