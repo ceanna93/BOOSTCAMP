@@ -21,3 +21,4 @@ x축이 푼 문제의 수, y축이 사용자의 수
 
 ### 시도
 Loss에 weight 추가 => 어려움!
+FocalLoss 시도 [참고](https://amaarora.github.io/2020/06/29/FocalLoss.html)
