@@ -1,3 +1,5 @@
+# Competition
+### K-Fold
 ```
 from sklearn.model_selection import KFold, StratifiedKFold
 import wandb
@@ -52,4 +54,25 @@ def main(args):
     cv.kfold(data=train_data)
 ```
 
-K-Fold 
+### Augmentation
+```
+        df = df.sort_values(by=['userID','Timestamp'], axis=0)
+        columns = ['userID', 'assessmentItemID', 'testId', 'answerCode', 'KnowledgeTag']
+        group = df[columns].groupby('userID').apply(
+                lambda r: (
+                    r['testId'].values, 
+                    r['assessmentItemID'].values,
+                    r['KnowledgeTag'].values,
+                    r['answerCode'].values
+                )
+            )
+
+        aug = group
+        idx = 0
+        for ft in tqdm(group):
+            for split in range(0, len(ft[0]), self.args.max_seq_len-1):
+                aug.loc[idx] = tuple([ft[0][split:split+self.args.max_seq_len], ft[1][split:split+self.args.max_seq_len], ft[2][split:split+self.args.max_seq_len], ft[3][split:split+self.args.max_seq_len]])
+                idx += 1
+
+        return aug.values
+```
