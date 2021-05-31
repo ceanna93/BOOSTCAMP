@@ -78,3 +78,6 @@ Continuous Embedding
 
 ## Why Kaggle
 Top-Down 방식으로 AI를 이해할 수 있다!
+
+# Competition
+Transformer에서 query의 크기를 1로 설정
